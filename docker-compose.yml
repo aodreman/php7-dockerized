@@ -29,7 +29,7 @@ services:
     volumes:
       - ./mysql:/var/lib/mysql
     environment:
-      MYSQL_ROOT_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: root
 
   code:
     image: busybox
@@ -39,3 +39,6 @@ services:
 # COPY conf/my.cnf /etc/mysql/my.cnf
 # - ./conf/php.ini:/etc/php/7.1/fpm/conf.d/40-custom.ini
 # command: /usr/bin/supervisord -c /etc/supervisor/conf.d/supervisord.conf
+
+#volumes:
+# - ./conf/php.ini:/etc/php/7.1/fpm/conf.d/40-custom.ini
